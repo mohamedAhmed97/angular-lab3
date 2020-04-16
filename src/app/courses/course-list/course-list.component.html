@@ -1,0 +1,7 @@
+<h4>
+    Courses List
+</h4>
+<hr>
+<ul>
+    <app-course-item *ngFor="let course of courses" (coursedata)="itemclick(course)" [coursedata]="course"></app-course-item>
+</ul>

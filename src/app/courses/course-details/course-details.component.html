@@ -1,0 +1,20 @@
+<br>
+<div class="card">
+    <div class="card-body">
+      <h4>User Details</h4> 
+      <hr>
+      <ul *ngIf="courseitem else empty">
+        <li>ID :{{courseitem.id}}</li>
+        <hr>
+        <li>Title :{{courseitem.title}}</li>
+        <hr>
+        <li>Price :{{courseitem.price}}</li>
+        <hr>
+        <li>Is Availabel :{{courseitem.isAvailabel}} </li>
+      </ul>
+    </div>
+</div>
+<ng-template #empty>
+        <p>No Course Selected</p>
+</ng-template>
+  

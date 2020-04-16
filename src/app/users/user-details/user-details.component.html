@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body">
+      <h4>User Details: </h4>
+      <hr>
+      <ul *ngIf="user else empty ">
+          <li>ID #{{user.id}}</li>
+          <li>Name : {{user.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+<ng-template #empty>
+    <li>User Not Selected</li>
+</ng-template>  

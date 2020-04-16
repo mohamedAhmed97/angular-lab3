@@ -1,0 +1,19 @@
+<h4>Add Course</h4>
+<hr>
+<form #addcourse="ngForm" (ngSubmit)="coursesubmit(addcourse)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">title</label>
+      <input type="text" class="form-control" #RefId="ngModel" name="title" [(ngModel)]="title" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="RefId.invalid && RefId.touched" role="alert">
+        ID Requierd
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">instructor</label>
+      <input type="text" name="instructor" #RefTitle="ngModel" [(ngModel)]="instructor" class="form-control" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="RefTitle.invalid && RefTitle.touched" role="alert">
+      Title Requierd
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

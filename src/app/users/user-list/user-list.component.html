@@ -1,0 +1,29 @@
+<br>
+  <div class="row">
+    <div class="container">
+      <app-userform></app-userform>
+    </div>  
+  </div>
+<br>
+<div class="row">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+              <h4>Users : </h4>
+              <hr>
+                <ul>
+                    <app-user-item *ngFor="let user of users"
+                     [userdata]=user (userclick)="onuserclick($event)"></app-user-item>
+                </ul>
+            </div>
+          </div>
+        
+    </div>
+</div>
+
+<br>
+  <div class="row">
+    <div class="container">
+      <app-user-details></app-user-details>
+    </div>
+  </div>
